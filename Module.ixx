@@ -20,9 +20,7 @@ int main()
 
 	cout << "Sales Tax: " << SalesTax * 100 << "%" << endl;
 
-	cout << "Final Sale Price: $" << FinalSale << endl;
-
-	cout << FinalSale << endl;
+	cout << "Final Sale Price: $" << setprecision(2) << FinalSale << endl;
 
 	return 0;
 }
