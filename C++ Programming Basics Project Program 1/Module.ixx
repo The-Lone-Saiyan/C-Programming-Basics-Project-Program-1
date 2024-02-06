@@ -6,13 +6,17 @@ using namespace std;
 int main()
 {
 	double OriginalPrice, MarkUp, SalesTax, FinalSale;
-	OriginalPrice = 99;
-	MarkUp = .6;
-	SalesTax = .0525;
-	FinalSale = (OriginalPrice + (OriginalPrice * MarkUp)) + (OriginalPrice + (OriginalPrice * MarkUp)) * SalesTax;
 
 	cout << "Please enter the item price:" << endl;
 	cin >> OriginalPrice;
+
+	cout << "Please enter the markup percent:" << endl;
+	cin >> MarkUp;
+
+	cout << "Please enter the sales tax:" << endl;
+	cin >> SalesTax;
+
+	FinalSale = (OriginalPrice + (OriginalPrice * MarkUp)) + (OriginalPrice + (OriginalPrice * MarkUp)) * SalesTax;
 
 	cout << "Item Price: $" << OriginalPrice << endl;
 
@@ -20,7 +24,7 @@ int main()
 
 	cout << "Sales Tax: " << SalesTax * 100 << "%" << endl;
 
-	cout << "Final Sale Price: $" << setprecision(2) << FinalSale << endl;
+	cout << "Final Sale Price: $" << fixed << setprecision(2) << FinalSale << endl;
 
 	return 0;
 }
